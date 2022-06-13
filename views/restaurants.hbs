@@ -34,21 +34,21 @@
           <div class="d-flex">
             {{#if isFavorited}}
              <form action="/favorite/{{this.id}}?_method=DELETE" method="POST">
-               <button type="submit" class="btn btn-danger m-1">移除最愛</button>
+               <button type="submit" class="btn btn-light m-1"><i class="fa fa-star" aria-hidden="true"></i></button>
              </form>
              {{else}}
              <form action="/favorite/{{this.id}}" method="POST">
-               <button type="submit" class="btn btn-primary m-1">加到最愛</button>
+               <button type="submit" class="btn btn-light m-1"><i class="fa fa-star-o" aria-hidden="true"></i></button>
              </form>
              {{/if}}
 
              {{#if isLiked}}
              <form action="/like/{{this.id}}?_method=DELETE" method="POST">
-               <button type="submit" class="btn btn-danger m-1">Unlike</button>
+               <button type="submit" class="btn btn-light m-1"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
              </form>
              {{else}}
              <form action="/like/{{this.id}}" method="POST">
-               <button type="submit" class="btn btn-primary m-1">Like</button>
+               <button type="submit" class="btn btn-light m-1"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
              </form>
              {{/if}}
          </div>
